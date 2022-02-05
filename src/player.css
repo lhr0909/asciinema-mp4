@@ -1,0 +1,8 @@
+#player {
+  width: 1920px;
+  height: 1080px;
+}
+
+#player .control-bar {
+  display: none;
+}

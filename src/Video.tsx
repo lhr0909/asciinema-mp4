@@ -1,17 +1,20 @@
-import {Composition} from 'remotion';
-import {MyComposition} from './Composition';
+import { Composition } from 'remotion';
+import { AsciinemaPlayer } from './AsciinemaPlayer';
 
 export const RemotionVideo: React.FC = () => {
-	return (
-		<>
-			<Composition
-				id="Empty"
-				component={MyComposition}
-				durationInFrames={60}
-				fps={30}
-				width={1280}
-				height={720}
-			/>
-		</>
-	);
+  return (
+    <>
+      <Composition
+        id="asciinema"
+        component={AsciinemaPlayer}
+        defaultProps={{
+          path: '/test.cast',
+        }}
+        durationInFrames={60 * Math.floor(1017.364589 / 128)}
+        fps={60}
+        width={1920}
+        height={1080}
+      />
+    </>
+  );
 };

@@ -4,7 +4,7 @@
 	"description": "My Remotion video",
 	"scripts": {
 		"start": "remotion preview src/index.tsx",
-		"build": "remotion render src/index.tsx Empty out/video.mp4",
+		"build": "remotion render src/index.tsx asciinema out/video.mov --codec prores --prores-profile 4444-xq",
 		"upgrade": "remotion upgrade",
 		"test": "eslint src --ext ts,tsx,js,jsx && tsc"
 	},
@@ -15,15 +15,18 @@
 		"@remotion/cli": "^2.3.2",
 		"@remotion/eslint-config": "^2.3.2",
 		"@remotion/renderer": "^2.3.2",
+		"asciinema-player": "3.0.0-rc.1",
 		"eslint": "^7.15.0",
 		"prettier": "^2.2.1",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"remotion": "^2.3.2",
+		"styled-components": "^5.3.3",
 		"typescript": "4.4.2"
 	},
 	"devDependencies": {
 		"@types/react": "^17.0.0",
+		"@types/styled-components": "^5.1.22",
 		"@types/web": "^0.0.46"
 	}
 }
