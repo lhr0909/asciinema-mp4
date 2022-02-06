@@ -1,32 +1,35 @@
 {
-	"name": "remotion-template",
-	"version": "1.0.0",
-	"description": "My Remotion video",
-	"scripts": {
-		"start": "remotion preview src/index.tsx",
-		"build": "remotion render src/index.tsx asciinema-v3 out/video.mov --codec prores --prores-profile 4444-xq",
-		"upgrade": "remotion upgrade",
-		"test": "eslint src --ext ts,tsx,js,jsx && tsc"
-	},
-	"repository": {},
-	"license": "UNLICENSED",
-	"dependencies": {
-		"@remotion/bundler": "^2.3.2",
-		"@remotion/cli": "^2.3.2",
-		"@remotion/eslint-config": "^2.3.2",
-		"@remotion/renderer": "^2.3.2",
-		"asciinema-player": "3.0.0-rc.1",
-		"eslint": "^7.15.0",
-		"prettier": "^2.2.1",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"remotion": "^2.3.2",
-		"styled-components": "^5.3.3",
-		"typescript": "4.4.2"
-	},
-	"devDependencies": {
-		"@types/react": "^17.0.0",
-		"@types/styled-components": "^5.1.22",
-		"@types/web": "^0.0.46"
-	}
+  "name": "asciinema-mp4",
+  "version": "0.1.0",
+  "description": "Render asciinema player videos as MP4 using Remotion",
+	"author": "Simon Liang <simon@x-tech.io>",
+  "scripts": {
+    "start": "remotion preview src/index.tsx",
+    "build": "remotion render src/index.tsx asciinema-v3 out/video.mov --codec prores --prores-profile 4444-xq",
+    "upgrade": "remotion upgrade",
+    "test": "eslint src --ext ts,tsx,js,jsx && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lhr0909/asciinema-mp4.git"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^2.3.2",
+    "@remotion/cli": "^2.3.2",
+    "@remotion/eslint-config": "^2.3.2",
+    "@remotion/renderer": "^2.3.2",
+    "asciinema-player": "3.0.0-rc.1",
+    "eslint": "^7.15.0",
+    "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remotion": "^2.3.2",
+    "styled-components": "^5.3.3",
+    "typescript": "4.4.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/styled-components": "^5.1.22",
+    "@types/web": "^0.0.46"
+  }
 }
