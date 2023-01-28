@@ -14,5 +14,15 @@ declare module 'asciinema-player' {
     fontSize?: 'small' | 'medium' | 'big' | string = 'small';
   }
 
-  export function create(src: string, elem: HTMLElement, opts: AsciinemaPlayerOptions = {}): void;
+  export class AsciinemaPlayer {
+    getCurrentTime(): number;
+    getDuration(): number;
+    play(): Promise<void>;
+    pause(): void;
+    seek(time: number): Promise<void>;
+    addEventListener(event: string, listener: (event: Event) => void): void;
+    dispose(): void;
+  }
+
+  export function create(src: string, elem: HTMLElement, opts: AsciinemaPlayerOptions = {}): AsciinemaPlayer;
 }

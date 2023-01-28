@@ -1,11 +1,13 @@
 {
   "name": "asciinema-mp4",
-  "version": "0.1.0",
-  "description": "Render asciinema player videos as MP4 using Remotion",
-	"author": "Simon Liang <simon@x-tech.io>",
+  "version": "1.0.0",
+  "description": "Render High Quality Terminal Output Videos",
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
-    "start": "remotion preview src/index.tsx",
-    "build": "remotion render src/index.tsx asciinema-v3 out/video.mov --codec prores --prores-profile 4444-xq",
+    "start": "remotion preview",
+    "build": "remotion render asciinema-player out/video.mov --codec prores --prores-profile 4444-xq",
     "upgrade": "remotion upgrade",
     "test": "eslint src --ext ts,tsx,js,jsx && tsc"
   },
@@ -13,23 +15,28 @@
     "type": "git",
     "url": "https://github.com/lhr0909/asciinema-mp4.git"
   },
-  "dependencies": {
-    "@remotion/bundler": "^2.3.2",
-    "@remotion/cli": "^2.3.2",
-    "@remotion/eslint-config": "^2.3.2",
-    "@remotion/renderer": "^2.3.2",
-    "asciinema-player": "3.0.0-rc.1",
-    "eslint": "^7.15.0",
-    "prettier": "^2.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "remotion": "^2.3.2",
-    "styled-components": "^5.3.3",
-    "typescript": "4.4.2"
-  },
+  "license": "MIT",
   "devDependencies": {
-    "@types/react": "^17.0.0",
-    "@types/styled-components": "^5.1.22",
-    "@types/web": "^0.0.46"
-  }
+    "@remotion/eslint-config": "^3.0.0",
+    "@types/react": "^18.0.26",
+    "@types/web": "^0.0.86",
+    "autoprefixer": "10.4.4",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.30.0",
+    "postcss": "8.4.12",
+    "postcss-loader": "6.2.1",
+    "postcss-preset-env": "7.4.3",
+    "prettier": "^2.8.1",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.1.6",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@remotion/cli": "3.3.37",
+    "asciinema-player": "^3.0.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "remotion": "3.3.37"
+  },
+  "packageManager": "pnpm@7.26.1"
 }
